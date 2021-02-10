@@ -80,8 +80,14 @@
     <!-- Loop door de array $nieuwsberichten en toon de gegevens in de juist HTML-tags  -->
 
 
-    <h1></h1>
+    <h1>amsterdam</h1>
     <div class="content">
+
+
+        <?php foreach ($nieuwsberichten as $nieuwsbericht) {
+            echo $nieuwsbericht[0]["titel"];
+        }    ?>
+
 
         <h2 class="title"></h2>
         <p class="title"></p>
