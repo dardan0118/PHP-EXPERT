@@ -86,6 +86,8 @@
 
         <?php foreach ($nieuwsberichten as $nieuwsbericht) {
             echo $nieuwsbericht[0]["titel"];
+            echo $nieuwsbericht[0]["beschrijving"];
+            echo $nieuwsbericht[0]["image"];
         }    ?>
 
 
