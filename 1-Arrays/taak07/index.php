@@ -80,22 +80,28 @@
     <!-- Loop door de array $nieuwsberichten en toon de gegevens in de juist HTML-tags  -->
 
 
-    <h1>amsterdam</h1>
-    <div class="content">
 
 
-        <?php foreach ($nieuwsberichten as $nieuwsbericht) {
-            echo $nieuwsbericht[0]["titel"];
-            echo $nieuwsbericht[0]["beschrijving"];
-            echo $nieuwsbericht[0]["image"];
-        }    ?>
 
 
-        <h2 class="title"></h2>
-        <p class="title"></p>
-        <img src="" class="title">
+    <?php foreach ($nieuwsberichten as $onderwerp => $nieuwsberichtArray) : ?>
+        <h1><?php echo $onderwerp ?>
+        </h1>
+        <div class="content">
+            <?php foreach ($nieuwsberichtArray as $nieuwsbericht) : ?>
+                <h2><?php echo $nieuwsbericht['titel'] ?></h2>
+                <h6><?php echo $nieuwsbericht['beschrijving'] ?></h6>
+                <img src="<?php echo $nieuwsbericht['image'] ?>" alt="">
 
-    </div>
+            <?php endforeach; ?>
+        </div>
+    <?php endforeach; ?>
+
+
+
+
+
+
 
 
 </body>
